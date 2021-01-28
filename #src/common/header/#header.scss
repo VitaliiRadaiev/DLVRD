@@ -1,0 +1,208 @@
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    transition: all .4s ease;
+
+    &._background {
+        background-color: #073fa2;
+    }
+    &._isMove {
+        background-color: #073fa2;
+    }
+    &._isMenuOpen {
+        background-color: #073fa2;
+    }
+
+    &__body {
+        max-width: 1360px;
+        padding: 25px 15px 15px;
+        margin: 0 auto;
+        min-height: 122px;
+        display: flex;
+        align-items: center;
+
+        @media (max-width: $md2+px) {
+            min-height: 90px;
+            padding: 15px 15px 15px;
+        }
+
+        @media (max-width: $md4+px) {
+            min-height: 60px;
+        }
+    }
+
+    &__logo {
+        margin-right: auto;
+
+        @media (max-width: 1265px) {
+            max-width: 220px;
+        }
+    }
+
+    &__menu {
+        margin-left: 15px;
+        margin-right: 18px;
+
+        @media (max-width: $md2+px) {
+            margin: 0;
+        }
+    }
+
+    &__btn {
+        color: #ffffff;
+        font-family: $titleFontFamily;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 1.875em;
+        text-transform: uppercase;
+        display: inline-flex;
+        align-items: center;
+        padding: 0.5em 0.937em 0.5em 1.31em;
+        border-radius: 6px;
+        background-color: $decorColor;
+        transition: all .2s ease;
+        margin-right: 2px;
+        margin-top: 4px;
+        align-self: center;
+        flex: 0 0 auto;
+
+        @media (max-width: 1265px) {
+            font-size: 12px;
+        }
+
+        @media (max-width: $md2+px) {
+            margin-left: 20px;
+        }
+        @media (max-width: $md4+px) {
+            font-size: 10px;
+        }
+
+        & > span {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            flex: 0 0 auto;
+            min-width: 0.937em;
+            width: 0.937em;
+            margin-left: 0.687em;
+
+            & img {
+                width: 100%;
+            }
+        }
+
+        @media (min-width: 992px) {
+            &:hover {
+                background-color: $mainColor2;
+            }
+        }
+    }
+
+    &__burger {
+        margin-left: 20px;
+        @media (min-width: 992px) {
+            display: none;
+        }
+    }
+}
+
+
+.menu {
+    @media (max-width: $md2+px) {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 20px 15px;
+        background-color: #073fa2;
+        display: none;
+    }
+
+    @media (min-width: 992px) {
+        display: block !important;
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+
+        @media (max-width: $md2+px) {
+            display: block;
+            text-align: center;
+        }
+
+        & > li {
+            &:not(:last-child) {
+                margin-right: 8px;
+
+                @media (max-width: $md2+px) {
+                    margin-right: 0;
+                    margin-bottom: 10px;
+                }
+
+                & .menu__link {
+                    &:after {
+                        content: '•';
+                        color: inherit;
+                        margin-left: 10px;
+                        color: #fff;
+                        display: inline-block;
+                        font-size: 16px;
+                        transition: all .2s ease;
+
+                        @media (max-width: $md2+px) {
+                            display: none;
+                        }
+                    }
+                }
+            }
+
+            @media (min-width: 992px) {
+                &:hover {
+                    & .menu__link {
+                        color: $decorColor;
+                        &:after {
+                            color: $decorColor;
+                        }
+                    }
+                }
+            }
+
+            &.active {
+                & .menu__link {
+                    color: $decorColor;
+                    &:after {
+                        color: $decorColor;
+                    }
+                }
+            }
+        }
+    }
+
+    &__link {
+        color: #ffffff;
+        font-family: $titleFontFamily;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 1.875em;
+        text-transform: uppercase;
+        transition: all .2s ease;
+
+
+        @media (max-width: 1265px) {
+            font-size: 12px;
+        }
+
+        @media (max-width: $md2+px) {
+            display: inline-block;
+            width: 100%;
+            font-size: 16px;
+        }
+    }
+}

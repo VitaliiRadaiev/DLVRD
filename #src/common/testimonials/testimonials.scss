@@ -1,0 +1,118 @@
+.testimonials {
+    margin-bottom: 104px;
+    @media (max-width: $md3+px) {
+        margin-bottom: 60px;
+    }
+    
+    &__bg {
+    }
+
+    &__slider {
+        position: relative;
+        box-shadow: 0 40px 80px rgba(0, 0, 0, 0.16);
+        border-radius: 10px;
+        background-color: $mainColor;
+        padding-top: 95px;
+        padding-bottom: 77px;
+    }
+
+    &__decor {
+        position: absolute;
+        top: 96px;
+        right: 80px;
+        width: 133px;
+        & img {
+            width: 100%;
+            z-index: i;
+        }
+    }
+
+    &__title {
+        color: #fff;
+        max-width: 525px;
+        margin: 0 auto 25px;
+    }
+
+    & .swiper-container {
+        z-index: 2;
+        margin-bottom: 40px;
+        padding-top: 50px;
+        margin-top: -50px;
+    }
+
+    & .swiper-slide {
+        position: relative;
+    }
+
+    & .swiper-pagination {
+        & .swiper-pagination-bullet  {
+            background-color: #fff;
+        }
+    }
+
+    &__text-wrap {
+        max-width: 525px;
+        margin: 0 auto;
+        position: relative;
+
+        &:before {
+            position: absolute;
+            content: '';
+            width: 127px;
+            height: 101px;
+            top: -35px;
+            left: -57px;
+            background-image: url(../img/photo/quote.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            z-index: 1;
+        }
+    }
+
+
+    &__text {
+        font-family: "Rubik-LightItalic", sans-serif;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 1.71em;
+        margin-bottom: 13px;
+        position: relative;
+        z-index: 2;
+        color: #fff;
+    }
+
+    &__author {
+        color: #ffffff;
+        font-family: $titleFontFamily;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 1.5em;
+        text-transform: uppercase;
+    }
+
+    &__logo {
+        width: 100%;
+        max-width: 241px;
+        position: absolute;
+        left: 99px;
+        top: 10px;
+        z-index: 2;
+
+        & img {
+            width: 100%;
+        }
+    }
+}
+.pagination-style {
+}
+.swiper-container {
+}
+.swiper-wrapper {
+}
+.swiper-slide {
+}
+.title-2 {
+}
+.swiper-pagination {
+}
