@@ -21,7 +21,6 @@
         let dataSlider;
 
         function mobileSlider() {
-            console.log(bottomTabs.dataset.mobile);
             if(document.documentElement.clientWidth <= 991 && bottomTabs.dataset.mobile == 'false') {
                 dataSlider = new Swiper(slider, {
 					slidesPerView: 'auto',

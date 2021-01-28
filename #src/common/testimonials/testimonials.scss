@@ -3,7 +3,7 @@
     @media (max-width: $md3+px) {
         margin-bottom: 60px;
     }
-    
+
     &__bg {
     }
 
@@ -12,8 +12,18 @@
         box-shadow: 0 40px 80px rgba(0, 0, 0, 0.16);
         border-radius: 10px;
         background-color: $mainColor;
-        padding-top: 95px;
-        padding-bottom: 77px;
+        padding-top: 102px;
+        padding-bottom: 82px;
+
+        @media (max-width: $md3+px) {
+            padding-top: 62px;
+            padding-bottom: 42px;
+        }
+
+        @media (max-width: $md4+px) {
+            padding-top: 32px;
+            padding-bottom: 32px;
+        }
     }
 
     &__decor {
@@ -21,6 +31,13 @@
         top: 96px;
         right: 80px;
         width: 133px;
+
+        @media (max-width: $md3+px) {
+           top: 30px;
+           right: 30px;
+           width: 90px;
+        }
+
         & img {
             width: 100%;
             z-index: i;
@@ -29,13 +46,20 @@
 
     &__title {
         color: #fff;
-        max-width: 525px;
+        max-width: 561px;
         margin: 0 auto 25px;
+        padding: 0 15px;
+        position: relative;
+        z-index: 3;
+
+        @media (max-width: $md4+px) {
+            margin-bottom: 15px;
+        }
     }
 
     & .swiper-container {
         z-index: 2;
-        margin-bottom: 40px;
+        margin-bottom: 38px;
         padding-top: 50px;
         margin-top: -50px;
     }
@@ -51,9 +75,10 @@
     }
 
     &__text-wrap {
-        max-width: 525px;
+        max-width: 561px;
         margin: 0 auto;
         position: relative;
+        padding: 0 15px;
 
         &:before {
             position: absolute;
@@ -75,8 +100,8 @@
         font-family: "Rubik-LightItalic", sans-serif;
         font-weight: 300;
         font-size: 14px;
-        line-height: 1.71em;
-        margin-bottom: 13px;
+        line-height: 1.76em;
+        margin-bottom: 18px;
         position: relative;
         z-index: 2;
         color: #fff;
@@ -89,15 +114,27 @@
         font-weight: 600;
         line-height: 1.5em;
         text-transform: uppercase;
+
+        @media (max-width: $md4+px) {
+            font-size: 16px;
+        }
     }
 
     &__logo {
         width: 100%;
         max-width: 241px;
         position: absolute;
-        left: 99px;
-        top: 10px;
+        left: 84px;
+        top: 21px;
         z-index: 2;
+
+        @media (max-width: 1265px) {
+            left: 20px;
+        }
+        @media (max-width: 1140px) {
+            position: static;
+            margin:10px auto;
+        }
 
         & img {
             width: 100%;
