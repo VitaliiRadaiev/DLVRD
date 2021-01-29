@@ -813,14 +813,6 @@
                 }
             }
 
-            &.active {
-                & .case-studies__head-link {
-                    color: $decorColor;
-                    &:after {
-                       color: $decorColor;
-                    }
-                }
-            }
         }
 
     }
@@ -845,13 +837,24 @@
             }
         }
 
+        &.active {
+            color: $decorColor;
+        }
+
     }
 
     &__body {
-        display: flex;
 
-        @media (max-width: $md2+px) {
-            display: block;
+    }
+
+    &__content-tab {
+        display: none;
+        &.active {
+            display: flex;
+
+            @media (max-width: $md2+px) {
+                display: block;
+            }
         }
     }
 

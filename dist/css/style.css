@@ -3779,14 +3779,6 @@ textarea {
   margin-left: 5px;
 }
 
-.case-studies__head-list > li.active .case-studies__head-link {
-  color: #ff5733;
-}
-
-.case-studies__head-list > li.active .case-studies__head-link:after {
-  color: #ff5733;
-}
-
 .case-studies__head-link {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -3804,7 +3796,15 @@ textarea {
   text-transform: uppercase;
 }
 
-.case-studies__body {
+.case-studies__head-link.active {
+  color: #ff5733;
+}
+
+.case-studies__content-tab {
+  display: none;
+}
+
+.case-studies__content-tab.active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4916,7 +4916,7 @@ textarea {
     width: 100%;
   }
 
-  .case-studies__body {
+  .case-studies__content-tab.active {
     display: block;
   }
 

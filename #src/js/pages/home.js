@@ -97,3 +97,27 @@
 
 
 }
+
+
+{
+    let caseStudiesLinks = document.querySelectorAll('.case-studies__head-link');
+    if(caseStudiesLinks.length) {
+        caseStudiesLinks.forEach(item => {
+            item.addEventListener('click', (e)=> {
+                e.preventDefault();
+                const id = e.target.getAttribute('href').replace('#','');
+        
+                document.querySelectorAll('.case-studies__head-link').forEach((child) => {
+                    child.classList.remove('active');
+                });
+    
+                document.querySelectorAll('.case-studies__content-tab').forEach((child) => {
+                    child.classList.remove('active');
+                });
+    
+                item.classList.add('active');
+                document.getElementById(id).classList.add('active');
+            })
+        })
+    }
+}
