@@ -1,0 +1,436 @@
+.team {
+    margin-bottom: 81px;
+
+    @media (max-width: $md3+px) {
+        margin-bottom: 60px;
+    }
+
+    &__title {
+        max-width: 10.32em;
+        margin: 0 auto 92px;
+        text-align: center;
+
+        @media (max-width: $md2+px) {
+            margin-bottom: 80px;
+        }
+        @media (max-width: $md3+px) {
+            margin-bottom: 50px;
+        }
+        @media (max-width: $md4+px) {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__list-wrap {
+        &.container {
+            max-width: 126.5rem;
+
+            @media (max-width: 1439px) {
+                max-width: 127.5rem;
+            }
+        }
+    }
+    &__list {}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.list-team {
+   
+
+    & > li {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        
+        @for $i from 1 through 49  {
+            &:nth-child(#{$i}) {
+                z-index: 50-$i;
+            }
+        }
+        
+
+    
+        @media (max-width: 1023px) {
+            flex-wrap: wrap;
+
+            & .list-team__cord-wrap {
+                position: relative;
+            
+                @for $i from 1 through 49  {
+                    &:nth-child(#{$i}) {
+                        z-index: 50-$i;
+                    }
+                }
+            }
+        }
+
+        @media (max-width: $md4+px) {
+            display: block;
+        }
+
+        &._one {
+            & .list-team__cord-wrap {
+                @media (min-width: 1024px) {
+                    &._open {
+                        &:first-child {
+                            & .card-team {
+                                position: absolute;
+                                left: 0;
+                                animation-name: cardTeamAnimation2;
+                                animation-duration: .6s;
+                                 z-index: 3;
+                            }
+     
+                            & .card-team__hover-box {
+                                right: 0;
+                            }
+                         }
+                    }
+
+                }
+            }
+        }
+
+        &._two {
+            & .list-team__cord-wrap {
+                @media (min-width: 1024px) {
+                    &._open {
+                        &:first-child {
+                            & .card-team {
+                                position: absolute;
+                                left: 0;
+                                animation-name: cardTeamAnimation;
+                                animation-duration: .6s;
+                                z-index: 3;
+                            }
+     
+                            & .card-team__hover-box {
+                                right: 0;
+                            }
+                        }
+     
+                         &:nth-child(2) {
+                             & .card-team {
+                                 position: absolute;
+                                 left: 0;
+                                 animation-name: cardTeamAnimation4;
+                                 animation-duration: .6s;
+                                  z-index: 3;
+                             }
+     
+                             & .card-team__hover-box {
+                                 right: 0;
+                             }
+                         }
+                    }
+
+                }
+            }
+        }
+    }
+    &__cord-wrap {
+        flex: 0 0 41.15rem;
+        margin-bottom: 4.3rem;
+        transition: all .4s ease;
+
+        @media (max-width: 1023px) {
+            position: relative;
+            cursor: pointer;
+
+            &:nth-child(1) {
+                z-index: 3;
+            }
+            &:nth-child(2) {
+                z-index: 2;
+            }
+            &:nth-child(3) {
+                z-index: 1;
+            }
+        } 
+
+        @media (max-width: $md4+px) {
+            margin-bottom: 5rem;
+        }   
+
+        @media (min-width: 1024px) {
+            &._open {
+                &:first-child {
+                    & .card-team {
+                        position: absolute;
+                        left: 0;
+                         z-index: 3;
+                    }
+    
+                    & .card-team__hover-box {
+                        right: 0;
+                    }
+                }
+    
+                &:nth-child(2) {
+                    & .card-team {
+                        position: absolute;
+                        left: 0;
+                        animation-name: cardTeamAnimation2;
+                        animation-duration: .6s;
+                         z-index: 3;
+                    }
+    
+                    & .card-team__hover-box {
+                        right: 0;
+                    }
+                }
+    
+                &:last-child {
+                    & .card-team {
+                        position: absolute;
+                        left: 0;
+                        animation-name: cardTeamAnimation3;
+                        animation-duration: .6s;
+                         z-index: 3;
+                    }
+    
+                    & .card-team__hover-box {
+                        right: 0;
+                    }
+                }
+            }
+
+        }
+
+    }
+    &__card {
+
+    }
+
+    @keyframes cardTeamAnimation {
+        from {
+            left:15%;
+        }
+        to {
+            left: 0;
+        }
+    }
+
+    @keyframes cardTeamAnimation2 {
+        from {
+            left:33.3333%;
+        }
+        to {
+            left: 0;
+        }
+    }
+
+    @keyframes cardTeamAnimation3 {
+        from {
+            left:66.6666%;
+        }
+        to {
+            left: 0;
+        }
+    }
+
+    @keyframes cardTeamAnimation4 {
+        from {
+            left:49%;
+        }
+        to {
+            left: 0;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.card-team {
+    width: 41.15rem;
+    height: 100%;
+    position: relative;
+    min-height: 42.1rem;
+    padding: 2rem 2rem 0px 2rem;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    @media (max-width: 1023px) {
+        display: flex;
+    }
+
+    @media (max-width: $md4+px) {
+        width: 100%;
+        padding: 2rem 1rem 0px;
+    }
+
+    @media (min-width: 992px) {
+        &:hover {
+            & .card-team__text-box {
+                box-shadow: 0 30px 60px rgba(6, 24, 28, 0.26);
+            }
+        }
+    }
+
+    &__img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 42.1rem;
+
+        & img {
+            //object-position: 0 -2rem;
+        }
+    }
+
+    &__text-box {
+        position: relative;
+        z-index: 2;
+        box-shadow: 0 30px 60px rgba(6, 24, 28, 0.16);
+        background: #fff;
+        margin-top: 32.5rem;
+        min-height: 10.4rem;
+        width: 100%;
+        padding: 2rem 3rem 2rem 3.5rem;
+        transition: all .3s ease;
+
+        @media (max-width: $md4+px) {
+            padding:3rem 2rem;
+        }
+    }
+    &__name {
+        font-size: 2.4rem;
+        line-height:1.416em;
+        color: #06181c;
+        text-transform: uppercase;   
+        font-weight: 500;     
+    }
+    &__position {
+        font-size: 2rem;
+        color: #06181c;
+        font-weight: 300;
+        line-height:1.55em;
+    }
+    &__hover-box {
+        position: absolute;
+            top: 0;
+            right: -200%;
+            height: calc(100% - 4.3rem);
+            width: calc(100% - 41.14rem);
+            background: #fff;
+            z-index: 5;
+            box-shadow: 0 3rem 6rem rgba(152, 152, 152, 0.16);
+            transition: all .4s ease;
+            overflow: hidden;
+            padding: 4rem 7rem 4rem 7rem;
+            display: flex;
+            flex-direction: column;
+
+
+          color: #06181c;
+          font-size: 2rem;
+          line-height: 1.75em;
+
+          @media (max-width: $md2+px) {
+            font-size: 1.6rem;
+        }
+
+
+        @media (max-width: 1023px) {
+            display: none;
+            top: 100%;
+            width: calc(100% - 40px);
+            height: auto;
+            right: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 0px 1.5rem 2rem;
+            transition: none;
+        }
+
+
+
+        @media (max-width: $md4+px) {
+            width: calc(100% - 20px);
+            font-size: 1.4rem;
+            line-height: 2.2rem;
+        }    
+
+
+        & h5 {
+            @media (max-width: $md2+px) {
+                font-size: 18px;
+            }
+        }
+    }
+
+    &__close {
+        display: inline-block;
+        margin-top: auto;
+        margin-left: auto;
+        color: #c4c4c4;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 1em;
+        text-transform: uppercase;
+        padding: 5px;
+        cursor: pointer;
+        transition: all .2s ease;
+        @media (min-width: 992px) {
+            &:hover {
+                background-color: rgba(#000, 0.1);
+            }
+        }
+    }
+}

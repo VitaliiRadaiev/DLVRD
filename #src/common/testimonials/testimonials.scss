@@ -4,6 +4,80 @@
         margin-bottom: 60px;
     }
 
+    &_v2 {
+        background-color: #073fa2;
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 93px;
+
+        @media (max-width: $md3+px) {
+            margin-bottom: 60px;
+        }
+
+        &:before {
+            position: absolute;
+            content: '';
+            top: 50%;
+            left: 0;
+            background: url(../img/photo/testimonials-decor.png) center no-repeat;
+            display: block;
+            height: 176px;
+            width: 195px;
+            transform: translateY(-50%);
+
+            @media (max-width: $md3+px) {
+                top: auto;
+                bottom: 0;
+                transform: translateY(0%);
+                height: 120px;
+                width: 140px;
+            }
+        }
+
+        & .testimonials__slider {
+            background-color: transparent;
+            box-shadow: none;
+        }
+
+        & .testimonials__text-wrap {
+            &:before {
+                position: absolute;
+                content: '';
+                top: auto;
+                left: auto;
+                right: 0;
+                bottom: 0;
+                background-image: url(../img/photo/quote2.png);
+            }
+        }
+
+        & .testimonials__decor {
+            top: 140px;
+            height: 190px;
+            width: auto;
+            opacity: 0.3;
+            right: auto;
+            left: 80%;
+
+            @media (max-width: $md2+px) {
+                transform: rotate(90deg);
+                transform-origin: 0 0;
+                height: 120px;
+                top: 30px;
+                left: 100%;
+            }
+            @media (max-width: $md3+px) {
+                height: 60px;
+                left: 60px;
+
+            }
+            & img {
+                height: 100%;
+                width: auto;
+            }
+        }
+    }
+
     &__bg {
     }
 
@@ -58,10 +132,11 @@
     }
 
     & .swiper-container {
-        z-index: 2;
+        z-index: 7;
         margin-bottom: 38px;
         padding-top: 50px;
         margin-top: -50px;
+        position: relative;
     }
 
     & .swiper-slide {
@@ -140,16 +215,4 @@
             width: 100%;
         }
     }
-}
-.pagination-style {
-}
-.swiper-container {
-}
-.swiper-wrapper {
-}
-.swiper-slide {
-}
-.title-2 {
-}
-.swiper-pagination {
 }

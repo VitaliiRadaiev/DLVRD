@@ -212,6 +212,19 @@ textarea {
 	}
 }
 
+.mini-logo {
+	width: 100%;
+	max-width: 167px;
+
+	@media (max-width: $md4+px) {
+		max-width: 120px;
+	}
+
+	& img {
+		width: 100%;
+	}
+}
+
 
 .plus {
 	display: inline-block;
@@ -274,7 +287,24 @@ textarea {
 }
 
 .title-4 {
+	color: #ffffff;
+	font-family: $titleFontFamily;
+	font-size: 40px;
+	font-weight: 700;
+	line-height: 1em;
+	text-transform: uppercase;
 
+	@media (max-width: $md2+px) {
+		font-size: 36px;
+	}
+
+	@media (max-width: $md3+px) {
+		font-size: 28px;
+	}
+
+	@media (max-width: $md4+px) {
+		font-size: 18px;
+	}
 }
 
 .title-5 {
@@ -454,12 +484,36 @@ button.btn-default {
 	}
 
 	& h5 {
+		color: #06181c;
+		font-size: 24px;
+		font-weight: 500;
+		line-height: 1.416em;
+		text-transform: uppercase;
+		margin-bottom: 0.8em;
 
+		@media (max-width: $md3+px) {
+			font-size: 20px;
+		}
+		@media (max-width: $md4+px) {
+			font-size: 16px;
+		}
 	}
 	& h6 {}
 
 	& p {
+		margin-top: 0;
 		margin-bottom: 0.65em;
+
+		& > a {
+			color: $mainColor2;
+			transition: all .2s ease;
+
+			@media (min-width: 992px) {
+				&:hover {
+					color: $decorColor;
+				}
+			}
+		}
 	}
 
 	& ul {
@@ -479,6 +533,8 @@ button.btn-default {
 @import "../common/footer/#footer";
 @import "../common/clients-block/clients-block";
 @import "../common/testimonials/testimonials";
+@import "../common/hero/hero";
+@import "../common/team-block/team-block";
 // ==== BLOCKS =====================================================
 
 
@@ -487,6 +543,10 @@ button.btn-default {
 	// ==== HOME =====================================================
 	@import "pages/#home";
 	// ==== AND HOME =====================================================
+	
+	// ==== ABOUT =====================================================
+	@import "pages/#about";
+	// ==== AND ABOUT =====================================================
 	
 // ==== AND PAGES =====================================================
 

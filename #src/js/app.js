@@ -52,6 +52,7 @@ $(document).ready(function () {
 	@@include('../common/burger/burger.js');
 	@@include('../common/header/header.js');
 	@@include('../common/testimonials/testimonials.js');
+	@@include('../common/team-block/team-block.js');
 	
 });
 
