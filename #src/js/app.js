@@ -44,6 +44,7 @@ $(document).ready(function () {
 	
 	// ==== PAGES ================================
 	@@include('pages/home.js');
+	@@include('pages/case-study-listing.js');
 	// ==== AND PAGES ================================
 
 	@@include('_function.js');
