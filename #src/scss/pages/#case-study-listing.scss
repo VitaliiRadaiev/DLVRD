@@ -1,0 +1,302 @@
+.case-studies-listing {
+    &__head {
+        padding-top: 70px;
+        margin-bottom: 20px;
+
+        @media (max-width: $md3+px) {
+            padding-top: 30px;
+            margin-bottom: 0;
+        }
+    }
+
+    &__title {
+        margin-bottom: 20px;
+    }
+
+    &__nav {
+        display: flex;
+        flex-wrap: wrap;
+        & > li {
+            margin-right: 12px;
+            margin-bottom: 12px;
+        }
+    }
+
+    &__link {
+        display: inline-block;
+        color: #818181;
+        font-family: $titleFontFamily;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 1em;
+        text-transform: uppercase;
+        transition: all .2s ease;
+        background-color: #fff;
+        border-radius: 6px;
+        border: 1px solid #e6e6e6;
+        padding: 0.9375em 2.95em;
+
+        @media (max-width: $md2+px) {
+            font-size: 12px;
+        }
+        @media (max-width: $md3+px) {
+            font-size: 9px;
+        }
+        
+        @media (min-width: 992px) {
+            &:hover {
+                color: #fff;
+                background-color: $decorColor;
+                border-color: $decorColor;
+            }
+        }
+
+        &.active {
+            color: #fff;
+            background-color: $decorColor;
+            border-color: $decorColor;
+        }
+    }
+
+    &__list {
+        margin-bottom: 71px;
+
+        
+        @media (max-width: $md3+px) {
+            margin-bottom: 50px;
+        }
+        & .case-studies-list-item {
+            &:nth-child(2n+3) {
+                background-color: #fff;
+            }
+            &:nth-child(even) {
+                background-color: #f2f9fd;
+
+                & .case-studies-list-item__body {
+                    flex-direction: row-reverse;
+                }
+
+                & .case-studies-list-item__img {
+                    left: auto;
+                    right: 0;
+                }
+
+                & .case-studies-list-item__text-wrap {
+                    margin-right: 0;
+                    margin-left: 61px;
+
+                    @media (max-width: 1265px) {
+                        margin-left: 0;
+                    }
+
+                    @media (max-width: $md2+px) {
+                        margin: 0 auto;
+                    }
+                }
+            }
+        }
+    }
+
+    &__bottom {
+        text-align: center;
+        margin-bottom: 148px;
+
+        @media (max-width: $md3+px) {
+            margin-bottom: 70px;
+        }
+    }
+}
+
+
+
+
+
+
+.case-studies-list-item {
+
+
+    &__body {
+        padding: 40px 15px 40px;
+        display: flex;
+    
+        @media (max-width: $md2+px) {
+            display: block;
+        }
+    }
+
+    &__column-1 {
+        flex: 0 0 38.66%;
+        position: relative;
+        min-height: 489px;
+
+        @media (max-width: $md3+px) {
+            min-height: 389px;
+        }
+
+    }
+    &__column-2 {
+        flex: 1 1 auto;
+        position: relative;
+        z-index: 2;
+        padding: 48px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        @media (max-width: $md2+px) {
+            padding: 0;
+            margin-top: -50px;
+        }
+    }
+
+    &__img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        height: 100%;
+        width: 153%;
+        border-radius: 10px;
+
+        @media (max-width: $md2+px) {
+            width: 100%;
+        }
+    }
+
+
+    &__text-wrap {
+        position: relative;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.16);
+        border-radius: 10px;
+        background-color: #0054e8;
+        padding: 34px 46px 45px 46px;
+        margin-right: 61px;
+
+        @media (max-width: 1265px) {
+            margin-right: 0;
+        }
+
+        @media (max-width: $md2+px) {
+            margin: 0 auto;
+            width: 90%;
+        }
+
+        @media (max-width: 575px) {
+            padding: 20px 15px;
+        }
+
+        &:before {
+            position: absolute;
+            content: '';
+            top: 34px;
+            right: 39px;
+            width: 97px;
+            height: 226px;
+            background: url(../img/icons/we-act/decor.png) center no-repeat;
+            background-size: contain;
+            z-index: 1;
+        }
+    }
+
+    &__logo {
+        width: 100%;
+        max-width: 178px;
+        margin-bottom: 34px;
+        position: relative;
+        z-index: 2;
+
+        @media (max-width: 575px) {
+            margin-bottom: 20px;
+        }
+        & img {
+            width: 100%;
+        }
+    }
+
+    &__inner {
+        display: flex;
+        position: relative;
+        z-index: 3;
+
+        @media (max-width: $md3+px) {
+            display: block;
+        }
+    }
+
+    &__text-column-1 {
+        flex: 0 0 241px;
+        margin-right: 17px;
+
+        & .link-btn {
+            @media (min-width: 992px) {
+                &:hover {
+                    color: rgba($decorColor, 0.8);
+                }
+            }
+
+            @media (max-width: $md3+px) {
+                display: none;
+            }
+        }
+    }
+    
+    &__text-column-2 {
+        flex: 1 1 auto;
+        padding-top: 20px;
+
+        @media (max-width: $md3+px) {
+            padding-top: 0;
+            
+        }
+
+        & .link-btn {
+            display: none;
+
+            @media (max-width: $md3+px) {
+                display: inline-flex;
+
+            }
+        }
+    }
+    &__suptitle {
+        color: #538ff8;
+        font-family: $titleFontFamily;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 1.2em;
+        text-transform: uppercase;
+        margin-bottom: 3px;
+
+        @media (max-width: 575px) {
+            font-size: 14px;
+        }
+    }
+
+    &__title {
+        color: #ffffff;
+        font-family: $titleFontFamily;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 1.3em;
+        margin-bottom: 31px;
+
+        @media (max-width: $md3+px) {
+            margin-bottom: 15px;
+        }
+
+        @media (max-width: 575px) {
+            font-size: 16px;
+        }
+
+    }
+
+
+    &__text {
+        color: #fff;
+
+        @media (max-width: $md3+px) {
+            margin-bottom: 20px;
+            
+        }
+    }
+}

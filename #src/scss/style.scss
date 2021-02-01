@@ -259,7 +259,27 @@ textarea {
 
 // === title ========================================================================
 .title-1 {
+	color: #151515;
+	font-family: $titleFontFamily;
+	font-size: 80px;
+	font-weight: 700;
+	line-height: 1em;
+	text-transform: uppercase;
+	max-width: 8.75em;
+	position: relative;
+	z-index: 2;
+	margin-top: 0;
 
+	@media (max-width: $md2+px) {
+		font-size: 60px;
+	}
+
+	@media (max-width: $md3+px) {
+		font-size: 40px;
+	}
+	@media (max-width: $md4+px) {
+		font-size: 30px;
+	}
 }
 .title-2 {
 	color: #151515;
@@ -547,6 +567,10 @@ button.btn-default {
 	// ==== ABOUT =====================================================
 	@import "pages/#about";
 	// ==== AND ABOUT =====================================================
+	
+	// ==== CASE STUDY LISTING =====================================================
+	@import "pages/#case-study-listing";
+	// ==== AND CASE STUDY LISTING =====================================================
 	
 // ==== AND PAGES =====================================================
 

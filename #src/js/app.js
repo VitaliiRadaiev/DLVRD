@@ -28,19 +28,19 @@ $(document).ready(function () {
 
 	// === // Проверка, поддержка браузером формата webp ==================================================================
 
-			// ==== ADD PADDING-TOP ================================
-			// {
-			// 	let wrapper = document.querySelector('.wrapper');
-			// 	if (wrapper) {
-			// 		let header = document.querySelector('.header');
-			// 		if(header) {
-			// 			let headerHeight = header.clientHeight;
-			// 			wrapper.style.paddingTop = headerHeight + 'px';
-			// 		}
+			//==== ADD PADDING-TOP ================================
+			{
+				let wrapper = document.querySelector('._margin-top');
+				if (wrapper) {
+					let header = document.querySelector('.header');
+					if(header) {
+						let headerHeight = header.clientHeight;
+						wrapper.style.marginTop = headerHeight + 'px';
+					}
 					
-			// 	}
-			// }
-			// ==== AND ADD PADDING-TOP ================================
+				}
+			}
+			//==== AND PADDING-TOP ================================
 	
 	// ==== PAGES ================================
 	@@include('pages/home.js');
