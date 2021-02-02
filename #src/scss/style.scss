@@ -297,7 +297,7 @@ textarea {
 	}
 
 	@media (max-width: $md4+px) {
-		font-size: 22px;
+		font-size: 26px;
 	}
 }
 
@@ -306,7 +306,7 @@ textarea {
 }
 
 .title-4 {
-	color: #ffffff;
+	color: #151515;
 	font-family: $titleFontFamily;
 	font-size: 40px;
 	font-weight: 700;
@@ -322,7 +322,7 @@ textarea {
 	}
 
 	@media (max-width: $md4+px) {
-		font-size: 18px;
+		font-size: 24px;
 	}
 }
 
@@ -483,7 +483,22 @@ button.btn-default {
 	& h2 {
 
 	}
-	& h3 {}
+	& h3 {	
+		color: #151515;
+		font-family: $titleFontFamily;
+		font-size: 40px;
+		font-weight: 700;
+		line-height: 1em;
+		text-transform: uppercase;
+		margin-bottom: 0.55em;
+		margin-top: 0;
+		@media (max-width: $md3+px) {
+			font-size: 32px;
+		}
+		@media (max-width: $md4+px) {
+			font-size: 26px;
+		}
+	}
 	& h4 {
 		color: #000001;
 		font-family: $titleFontFamily;
@@ -554,6 +569,7 @@ button.btn-default {
 @import "../common/testimonials/testimonials";
 @import "../common/hero/hero";
 @import "../common/team-block/team-block";
+@import "../common/img-slider/img-slider";
 // ==== BLOCKS =====================================================
 
 
@@ -570,6 +586,10 @@ button.btn-default {
 	// ==== CASE STUDY LISTING =====================================================
 	@import "pages/#case-study-listing";
 	// ==== AND CASE STUDY LISTING =====================================================
+	
+	// ==== INNER-CASE-STUDY =====================================================
+	@import "pages/#inner-case-study";
+	// ==== AND INNER-CASE-STUDY =====================================================
 	
 // ==== AND PAGES =====================================================
 

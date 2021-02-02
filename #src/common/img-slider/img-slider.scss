@@ -1,0 +1,49 @@
+.img-slider {
+    background-color: $bgColor;
+    padding: 62px 0 43px;
+    margin-bottom: 60px;
+
+    @media (max-width: $md3+px) {
+        padding: 32px 0 32px;
+        margin-bottom: 50px;
+    }
+
+    &__body {
+        width: 100%;
+        max-width: 1000px;
+        padding: 0 15px;
+        margin: 0 auto;
+    }
+
+    & .swiper-container {
+        margin-bottom: 19px;
+    }
+
+    & .swiper-slide {
+        & > span {
+            display: block;
+            height: 0;
+            position: relative;
+            padding-bottom: 54.32%;
+            overflow: hidden;
+            border-radius: 6px;
+
+            @media (max-width: $md4+px) {
+                padding-bottom: 70%;
+            }
+        }
+    }
+    
+
+    &__btn-wrap {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    &__btn-prev {
+        margin-right: 12px;
+    }
+
+    &__btn-next {
+    }
+}

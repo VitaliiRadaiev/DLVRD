@@ -54,6 +54,7 @@ $(document).ready(function () {
 	@@include('../common/header/header.js');
 	@@include('../common/testimonials/testimonials.js');
 	@@include('../common/team-block/team-block.js');
+	@@include('../common/img-slider/img-slider.js');
 	
 });
 

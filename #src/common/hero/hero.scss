@@ -60,25 +60,25 @@
         &:before {
             position: absolute;
             content: '';
-            top: 46%;
+            top: 50%;
             right: 81%;
             width: 3000px;
-            height: 370px;
+            height: 125%;
             background-color: rgba(#fff, 0.15);
             transform: translateY(-50%);
 
             @media (max-width: $md2+px) {
-                height: 260px;
+               // height: 260px;
                 top: 50%;
                 right: 76%;
             }
-            @media (max-width: $md3+px) {
-                height: 160px;
-            }
+            // @media (max-width: $md3+px) {
+            //     height: 160px;
+            // }
 
-            @media (max-width: $md4+px) {
-                height: 115px;
-            }
+            // @media (max-width: $md4+px) {
+            //     height: 115px;
+            // }
         }
     }
 
@@ -93,6 +93,7 @@
         position: relative;
         z-index: 2;
         margin-bottom: 6px;
+        margin-top: 0;
 
         @media (max-width: $md2+px) {
             font-size: 60px;
@@ -103,6 +104,26 @@
         }
         @media (max-width: $md4+px) {
             font-size: 26px;
+        }
+    }
+
+    &__suptitle {    
+        color: $decorColor;
+        font-family: $titleFontFamily;
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 1em;
+        text-transform: uppercase;
+        margin-bottom: 9px;
+
+        @media (max-width: $md2+px) {
+            font-size: 26px;
+        }
+        @media (max-width: $md3+px) {
+            font-size: 18px;
+        }
+        @media (max-width: $md4+px) {
+            font-size: 14px;
         }
     }
 
