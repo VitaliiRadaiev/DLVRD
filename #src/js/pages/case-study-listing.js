@@ -26,13 +26,13 @@
 
     }
 
-    let caseStudiesSliders = document.querySelectorAll('.case-studies-list-item__img-wrap._swiper');
+    let caseStudiesSliders = document.querySelectorAll('.case-studies-list-item__slider._swiper');
     if(caseStudiesSliders.length) {
         caseStudiesSliders.forEach((item, index) => { 
             let caseStudiesSlider;
                 caseStudiesSlider = new Swiper(item, {
                 slidesPerView: 1,
-                spaceBetween: 10,
+                spaceBetween: 15,
                 speed: 600,
                 navigation: {
                     nextEl: item.nextElementSibling.querySelector('.case-studies-list-item__btn-next'),
