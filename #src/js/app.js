@@ -46,6 +46,7 @@ $(document).ready(function () {
 	@@include('pages/home.js');
 	@@include('pages/case-study-listing.js');
 	@@include('pages/services-page.js');
+	@@include('pages/inner-services.js');
 	// ==== AND PAGES ================================
 
 	@@include('_function.js');

@@ -327,7 +327,23 @@ textarea {
 }
 
 .title-5 {
+	color: #151515;
+	font-family: $titleFontFamily;
+	font-size: 30px;
+	font-weight: 700;
+	line-height: 1em;
+	text-transform: uppercase;
+	margin-bottom: 17px;
 
+	@media (max-width: $md2+px) {
+		font-size: 26px;
+	}
+	@media (max-width: $md3+px) {
+		font-size: 22px;
+	}
+	@media (max-width: $md4+px) {
+		font-size: 20px;
+	}
 
 }
 .title-6 {
@@ -549,9 +565,23 @@ button.btn-default {
 			}
 		}
 	}
-
 	& ul {
+		& li {
+			position: relative;
+			padding-left: 14px;
+			line-height: 1.45em;
 
+			&:not(:last-child) {
+				margin-bottom: 11px;
+			}
+
+			&:before {
+				position: absolute;
+				content: '•';
+				left: 0;
+				top: -2px;
+			}
+		}
 	}
 
 	& ol {}
@@ -594,6 +624,10 @@ button.btn-default {
 	// ==== SERVICES-PAGE =====================================================
 	@import "pages/#services-page";
 	// ==== AND SERVICES-PAGE =====================================================
+	
+	// ==== INNER-SERVICES =====================================================
+	@import "pages/#inner-services";
+	// ==== AND INNER-SERVICES =====================================================
 	
 // ==== AND PAGES =====================================================
 
