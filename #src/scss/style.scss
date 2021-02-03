@@ -333,7 +333,6 @@ textarea {
 	font-weight: 700;
 	line-height: 1em;
 	text-transform: uppercase;
-	margin-bottom: 17px;
 
 	@media (max-width: $md2+px) {
 		font-size: 26px;
@@ -584,6 +583,10 @@ button.btn-default {
 		}
 	}
 
+	& strong {
+		font-weight: 700;
+	}
+
 	& ol {}
 
 	& figure {}
@@ -628,6 +631,10 @@ button.btn-default {
 	// ==== INNER-SERVICES =====================================================
 	@import "pages/#inner-services";
 	// ==== AND INNER-SERVICES =====================================================
+	
+	// ==== CONTACT =====================================================
+	@import "pages/#contact";
+	// ==== AND CONTACT =====================================================
 	
 // ==== AND PAGES =====================================================
 
