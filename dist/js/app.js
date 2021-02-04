@@ -192,6 +192,11 @@ $(document).ready(function () {
                 
                 this.closest('.services__card').classList.remove('_open');
             })
+            if(document.documentElement.clientWidth > 767) {
+                let height = card.getBoundingClientRect().top - servicesList.getBoundingClientRect().top;
+                let bigCard = card.querySelector('.services__big-card');
+                bigCard.style.top = height + 'px';
+            }
 
             if(document.documentElement.clientWidth < 768) {
                 let height = card.getBoundingClientRect().top - servicesList.getBoundingClientRect().top;
@@ -203,22 +208,22 @@ $(document).ready(function () {
 
         })
 
-        if(cards.length > 8) {
-            if((cards.length - 8) >= 4) {
-                cards[cards.length - 1].classList.add('_downRight');
-                cards[cards.length - 2].classList.add('_downRight');
-                cards[cards.length - 3].classList.add('_downLeft');
-                cards[cards.length - 4].classList.add('_downLeft');
-            } else if((cards.length - 8) == 3) {
-                cards[cards.length - 1].classList.add('_downRight');
-                cards[cards.length - 2].classList.add('_downRight');
-                cards[cards.length - 3].classList.add('_downLeft');
+        // if(cards.length > 8) {
+        //     if((cards.length - 8) >= 4) {
+        //         cards[cards.length - 1].classList.add('_downRight');
+        //         cards[cards.length - 2].classList.add('_downRight');
+        //         cards[cards.length - 3].classList.add('_downLeft');
+        //         cards[cards.length - 4].classList.add('_downLeft');
+        //     } else if((cards.length - 8) == 3) {
+        //         cards[cards.length - 1].classList.add('_downRight');
+        //         cards[cards.length - 2].classList.add('_downRight');
+        //         cards[cards.length - 3].classList.add('_downLeft');
                 
-            } else if((cards.length - 8) <= 2) {
-                cards[cards.length - 1].classList.add('_downLeft');
-                cards[cards.length - 2].classList.add('_downLeft');
-            }
-        }
+        //     } else if((cards.length - 8) <= 2) {
+        //         cards[cards.length - 1].classList.add('_downLeft');
+        //         cards[cards.length - 2].classList.add('_downLeft');
+        //     }
+        // }
 
         window.addEventListener('click', (e) => {
             if(!e.target.closest('.services__list')) {
