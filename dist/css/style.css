@@ -3692,7 +3692,15 @@ textarea {
   margin-bottom: 30px;
 }
 
-.services__card {
+.services__card._open .services__big-card {
+  visibility: visible;
+  z-index: 50;
+  -webkit-transform: scaleX(1);
+      -ms-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+.services__card-inner {
   position: relative;
   height: 0;
   padding-bottom: 100%;
@@ -3704,7 +3712,7 @@ textarea {
   transition: all .2s ease;
 }
 
-.services__card > span {
+.services__card-inner > span {
   position: absolute;
   top: 0;
   left: 0;
@@ -3722,7 +3730,7 @@ textarea {
   padding: 15px;
 }
 
-.services__card > span img {
+.services__card-inner > span img {
   max-width: 100%;
   max-height: 100%;
   -o-object-fit: contain;
@@ -3730,6 +3738,122 @@ textarea {
   height: auto;
   width: auto;
   position: static;
+}
+
+.services__big-card {
+  position: absolute;
+  top: 0;
+  left: 15px;
+  visibility: hidden;
+  width: 72.5%;
+  -webkit-transition: all .2s ease;
+  -o-transition: all .2s ease;
+  transition: all .2s ease;
+  -webkit-transform: scaleX(0);
+      -ms-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: left;
+      -ms-transform-origin: left;
+          transform-origin: left;
+}
+
+.big-card-services {
+  border-radius: 10px;
+  background-color: #0054e8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 507px;
+  overflow: hidden;
+  min-width: 0;
+  -webkit-box-shadow: 0px 0px 20px 0px #033283;
+          box-shadow: 0px 0px 20px 0px #033283;
+}
+
+.big-card-services__close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 6px;
+  -webkit-transition: all .2s ease;
+  -o-transition: all .2s ease;
+  transition: all .2s ease;
+  cursor: pointer;
+}
+
+.big-card-services__close > span {
+  display: block;
+  height: 30px;
+  width: 30px;
+  position: relative;
+}
+
+.big-card-services__close > span:before {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 50%;
+  width: 2px;
+  height: 100%;
+  background-color: #fff;
+  -webkit-transform: translateX(-50%) rotate(45deg);
+      -ms-transform: translateX(-50%) rotate(45deg);
+          transform: translateX(-50%) rotate(45deg);
+  -webkit-transform-origin: center;
+      -ms-transform-origin: center;
+          transform-origin: center;
+}
+
+.big-card-services__close > span:after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 50%;
+  width: 2px;
+  height: 100%;
+  background-color: #fff;
+  -webkit-transform: translateX(-50%) rotate(-45deg);
+      -ms-transform: translateX(-50%) rotate(-45deg);
+          transform: translateX(-50%) rotate(-45deg);
+}
+
+.big-card-services__column-1 {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 37.7%;
+          flex: 0 0 37.7%;
+}
+
+.big-card-services__column-2 {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  padding: 40px 53px 40px 46px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.big-card-services__logo {
+  width: 100%;
+  max-width: 172px;
+  margin-bottom: 34px;
+}
+
+.big-card-services__logo img {
+  width: 100%;
+}
+
+.big-card-services__text {
+  color: #fff;
+  width: 100%;
+  margin-bottom: 17px;
 }
 
 .case-studies {
@@ -5492,6 +5616,37 @@ textarea {
 }
 
 @media (min-width: 768px) {
+  .services__list > li:nth-child(4n+3) .services__big-card {
+    left: auto;
+    right: 15px;
+    -webkit-transform-origin: right;
+        -ms-transform-origin: right;
+            transform-origin: right;
+  }
+
+  .services__list > li:nth-child(4n+4) .services__big-card {
+    left: auto;
+    right: 15px;
+    -webkit-transform-origin: right;
+        -ms-transform-origin: right;
+            transform-origin: right;
+  }
+
+  .services__card._downLeft .services__big-card {
+    top: auto;
+    bottom: 30px;
+  }
+
+  .services__card._downRight .services__big-card {
+    top: auto;
+    left: auto;
+    right: 15px;
+    bottom: 30px;
+    -webkit-transform-origin: right;
+        -ms-transform-origin: right;
+            transform-origin: right;
+  }
+
   .timeline__list > li:nth-child(odd) {
     -webkit-transform: translateY(69px);
         -ms-transform: translateY(69px);
@@ -5619,8 +5774,16 @@ textarea {
     padding: 35px 30px 20px 55px;
   }
 
-  .services__card:hover {
+  .services__card-inner:hover {
     background-color: #ff5733;
+  }
+
+  .big-card-services__close:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .big-card-services__column-2 .link-btn:hover {
+    color: rgba(255, 87, 51, 0.8);
   }
 
   .case-studies__head-link:hover {
@@ -6748,6 +6911,11 @@ textarea {
     margin-bottom: 15px;
   }
 
+  .services__big-card {
+    left: 7.5px;
+    width: 98%;
+  }
+
   .case-studies {
     margin-bottom: 60px;
     padding-bottom: 0;
@@ -6995,6 +7163,10 @@ textarea {
 }
 
 @media (max-width: 575px) {
+  .big-card-services__column-2 {
+    padding: 40px 20px 30px 20px;
+  }
+
   .we-act__item {
     -webkit-box-flex: 0;
         -ms-flex: 0 1 100%;
@@ -7215,6 +7387,14 @@ textarea {
     -webkit-box-flex: 0;
         -ms-flex: 0 1 50%;
             flex: 0 1 50%;
+  }
+
+  .services__big-card {
+    width: 96.5%;
+  }
+
+  .big-card-services__column-1 {
+    display: none;
   }
 
   .case-studies__head {

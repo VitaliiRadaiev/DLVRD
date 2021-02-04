@@ -705,10 +705,64 @@
             @media (max-width: $md4+px) {
                 flex: 0 1 50%;
             }
+
+            @media (min-width: 768px) {
+                &:nth-child(4n+3) {
+                    & .services__big-card {
+                        left: auto;
+                        right: 15px;
+                        transform-origin: right;
+                    }
+                }
+                &:nth-child(4n+4) {
+                    & .services__big-card {
+                        left: auto;
+                        right: 15px;
+                        transform-origin: right;
+                    }
+                }
+            }
+
         }
     }
 
     &__card {
+        &._open {
+            & .services__big-card {
+                visibility: visible;
+               // opacity: 1;
+                z-index: 50;
+                transform: scaleX(1);
+            }
+        }
+
+        @media (min-width: 768px) {
+            &._downLeft {
+
+                & .services__big-card {
+                    top: auto;
+                    bottom: 30px;
+    
+
+                }
+            }
+    
+            &._downRight {
+                & .services__big-card {
+                    top: auto;
+                    left: auto;
+                    right: 15px;
+                    bottom: 30px;
+                    transform-origin: right;
+    
+   
+                }
+            }
+        }
+
+    }
+
+    &__card-inner {
         position: relative;
         height: 0;
         padding-bottom: 100%;
@@ -745,10 +799,142 @@
             
         }
     }
+
+
+
+    &__big-card {
+        position: absolute;
+        top: 0;
+        left: 15px;
+        visibility: hidden;
+        //opacity: 0;
+        width: 72.5%;
+        transition: all .2s ease;
+        transform: scaleX(0);
+        transform-origin: left;
+
+        @media (max-width: $md3+px) {
+            left: 7.5px;
+            width: 98%;
+        }
+
+        @media (max-width: $md4+px) {
+            width: 96.5%;
+        }
+    }
 }
 
 
 
+
+
+
+
+
+
+
+
+
+.big-card-services {
+    border-radius: 10px;
+    background-color: #0054e8;
+    display: flex;
+    min-height: 507px;
+    overflow: hidden;
+    min-width: 0;
+    box-shadow: 0px 0px 20px 0px #033283;
+
+
+    &__close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        padding: 6px;
+        transition: all .2s ease;
+        cursor: pointer;
+
+        & > span {
+            display: block;
+            height: 30px;
+            width: 30px;
+            position: relative;
+
+            &:before {
+                position: absolute;
+                content: '';
+                top: 0;
+                left: 50%;
+                width: 2px;
+                height: 100%;
+                background-color: #fff;
+                transform: translateX(-50%) rotate(45deg);
+                transform-origin: center;
+            }
+            &:after {
+                position: absolute;
+                content: '';
+                top: 0;
+                left: 50%;
+                width: 2px;
+                height: 100%;
+                background-color: #fff;
+                transform: translateX(-50%) rotate(-45deg);
+            }
+        }
+
+        @media (min-width: 992px) {
+            &:hover {
+                background-color: rgba(#fff, 0.1);
+            }
+        }
+    }
+
+    &__column-1 {
+        flex: 0 0 37.7%;
+
+        @media (max-width: $md4+px) {
+            display: none;
+        }
+
+    }
+
+    &__column-2 {
+        flex: 1 1 auto;
+        padding: 40px 53px 40px 46px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        @media (max-width: 575px) {
+            padding: 40px 20px 30px 20px;
+        }
+
+        & .link-btn {
+            @media (min-width: 992px) {
+                &:hover {
+                    color: rgba($decorColor, 0.8);
+                }
+            }
+        }
+    }
+
+    &__logo {
+        width: 100%;
+        max-width: 172px;
+        margin-bottom: 34px;
+
+        & img {
+            width: 100%;
+        }
+    }
+
+    &__text {
+        color: #fff;
+        width: 100%;
+        margin-bottom: 17px;
+
+    }
+}
 
 
 
