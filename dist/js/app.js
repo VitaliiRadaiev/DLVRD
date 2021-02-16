@@ -456,7 +456,7 @@ let _slideToggle = (target, duration = 500) => {
 
 
 
-// === Конвертация svg картинки в svg код ==================================================================
+
 $('img.img-svg').each(function(){
   var $img = $(this);
   var imgClass = $img.attr('class');
@@ -473,7 +473,7 @@ $('img.img-svg').each(function(){
     $img.replaceWith($svg);
   }, 'xml');
 });
-// === // Конвертация svg картинки в svg код ==================================================================
+
 
 
 
