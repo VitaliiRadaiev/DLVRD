@@ -1071,9 +1071,11 @@
             padding-right: 60px;
         }
 
-        @media (max-width: $md3+px) {
+        @media (max-width: $md2+px) {
+            max-width: none;
             padding-right: 0;
         }
+
     }
 
 

@@ -57,6 +57,7 @@ $(document).ready(function () {
 	@@include('../common/testimonials/testimonials.js');
 	@@include('../common/team-block/team-block.js');
 	@@include('../common/img-slider/img-slider.js');
+	@@include('../common/clients-block/clients-block.js');
 	
 });
 

@@ -10,6 +10,7 @@
 			header.classList.toggle('_isMenuOpen');
 		}
 		document.querySelector(`.${classNameElem}`).classList.toggle('open');
+		document.body.classList.toggle('lock');
 		_slideToggle(document.querySelector(`.${classNameElem}`));
 	}
 	$('.burger').click((e) => burgerBtnAnimation(e));

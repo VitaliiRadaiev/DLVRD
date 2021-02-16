@@ -59,19 +59,24 @@
         margin-bottom: 49px;
         line-height: 0.84em;
         & > strong {
-            display: block;
+            margin-right: 10px;
             color: $decorColor;
+
+            @media (min-width: 992px) {
+                display: block;
+            }
         }
 
         @media (max-width: $md2+px) {
             margin-bottom: 10px;
+            font-size: 48px;
         }
-        @media (max-width: $md3+px) {
-            font-size: 60px;
-        }
-        @media (max-width: $md4+px) {
-            font-size: 50px;
-        }
+        // @media (max-width: $md3+px) {
+        //     font-size: 60px;
+        // }
+        // @media (max-width: $md4+px) {
+        //     font-size: 50px;
+        // }
     }
 
     &__subtitle {     

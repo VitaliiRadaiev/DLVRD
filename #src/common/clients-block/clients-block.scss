@@ -10,35 +10,33 @@
     &__list {
         border-radius: 9px;
         background-color: #ffffff;
-        padding: 96px 50px 33px;
+        padding: 70px 50px 33px;
         display: flex;
         flex-wrap: wrap;
         align-items: center;
+        margin-bottom: 40px;
 
         @media (max-width: $md2+px) {
             padding: 60px 0px 33px;
         }
 
         @media (max-width: $md4+px) {
-            padding: 30px 0px 10px;
+            padding: 30px 0px 33px;
         }
 
-        & > li {
-            flex: 0 1 33.3333%;
-            padding: 10px 15px;
+        & .swiper-slide {
+            height: auto;
+            padding: 10px 25px;
             text-align: center;
-            margin-bottom: 72px;
-
-            @media (max-width: $md3+px) {
-                margin-bottom: 40px;
-            }
-
-            @media (max-width: $md4+px) {
-                margin-bottom: 20px;
-            }
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
 
             & img {
                 max-width: 100%;
+                max-height: 100%;
+                height: auto;
             }
         }
     }

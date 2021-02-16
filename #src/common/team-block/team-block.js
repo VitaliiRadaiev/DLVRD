@@ -130,9 +130,9 @@
 
 		if(document.documentElement.clientWidth <= 1023) {
 			transferCardsForSmallWindow();
-
 		} else {
 			transferCardsForBigWindow();
+			block.querySelector('.list-team__cord-wrap').classList.add('_open');
 		}
 
 		if(document.documentElement.clientWidth > 1023 && document.documentElement.clientWidth <= 1440) {
@@ -149,6 +149,7 @@
 				transferCardsForSmallWindow();
 			}
 		})
+
 	}
 }
 // ==== // team correct height =======================================================

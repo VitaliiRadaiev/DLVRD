@@ -2157,6 +2157,10 @@ textarea {
           justify-content: flex-end;
 }
 
+.menu__list > li {
+  position: relative;
+}
+
 .menu__list > li:not(:last-child) {
   margin-right: 8px;
 }
@@ -2191,6 +2195,57 @@ textarea {
   -webkit-transition: all .2s ease;
   -o-transition: all .2s ease;
   transition: all .2s ease;
+}
+
+.sub-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 160px;
+  background-color: #ff5733;
+  border-radius: 6px;
+  display: none;
+  -webkit-animation: subMenuUp .4s ease;
+          animation: subMenuUp .4s ease;
+}
+
+.sub-menu .menu__link {
+  font-size: 12px;
+  display: inline-block;
+  width: 100%;
+  padding: 0 10px;
+}
+
+.sub-menu .menu__link:after {
+  display: none !important;
+}
+
+@-webkit-keyframes subMenuUp {
+  from {
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+    opacity: 0;
+  }
+
+  to {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes subMenuUp {
+  from {
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+    opacity: 0;
+  }
+
+  to {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+  }
 }
 
 .cta-footer {
@@ -2444,7 +2499,7 @@ textarea {
 .clients-block__list {
   border-radius: 9px;
   background-color: #ffffff;
-  padding: 96px 50px 33px;
+  padding: 70px 50px 33px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2453,19 +2508,28 @@ textarea {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 40px;
 }
 
-.clients-block__list > li {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 33.3333%;
-          flex: 0 1 33.3333%;
-  padding: 10px 15px;
+.clients-block__list .swiper-slide {
+  height: auto;
+  padding: 10px 25px;
   text-align: center;
-  margin-bottom: 72px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.clients-block__list > li img {
+.clients-block__list .swiper-slide img {
   max-width: 100%;
+  max-height: 100%;
+  height: auto;
 }
 
 .testimonials {
@@ -2616,12 +2680,16 @@ textarea {
   max-width: 241px;
   position: absolute;
   left: 84px;
-  top: 21px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
   z-index: 2;
 }
 
 .testimonials__logo img {
-  width: 100%;
+  max-height: 100%;
+  max-width: 100%;
 }
 
 .hero {
@@ -3167,6 +3235,7 @@ textarea {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  overflow-y: auto;
   color: #06181c;
   font-size: 2rem;
   line-height: 1.75em;
@@ -5412,7 +5481,7 @@ textarea {
 }
 
 .contact__title > strong {
-  display: block;
+  margin-right: 10px;
   color: #ff5733;
 }
 
@@ -5687,6 +5756,19 @@ textarea {
     color: #ff5733;
   }
 
+  .menu__list > li:hover .sub-menu {
+    display: block;
+  }
+
+  .menu__list > li:hover .sub-menu .menu__link {
+    color: #fff;
+  }
+
+  .sub-menu .menu__link:hover {
+    background-color: rgba(0, 84, 232, 0.2);
+    color: #fff !important;
+  }
+
   .cta-footer:hover .cta-footer__arrow {
     -webkit-transform: translateX(20px);
         -ms-transform: translateX(20px);
@@ -5827,6 +5909,10 @@ textarea {
     background-color: transparent;
   }
 
+  .contact__title > strong {
+    display: block;
+  }
+
   .btn-submit:hover {
     background-color: #ff5733;
   }
@@ -5933,6 +6019,12 @@ textarea {
   }
 }
 
+@media (max-width: 1340px) {
+  .menu__link {
+    font-size: 14px;
+  }
+}
+
 @media (max-width: 1330px) {
   .services-block__list {
     width: 106%;
@@ -5941,7 +6033,7 @@ textarea {
 
 @media (max-width: 1265px) {
   .header__logo {
-    max-width: 220px;
+    max-width: 180px;
   }
 
   .header__btn {
@@ -5949,7 +6041,7 @@ textarea {
   }
 
   .menu__link {
-    font-size: 12px;
+    font-size: 11px;
   }
 
   .testimonials__logo {
@@ -6027,6 +6119,9 @@ textarea {
   .testimonials__logo {
     position: static;
     margin: 10px auto;
+    -webkit-transform: translateY(0%);
+        -ms-transform: translateY(0%);
+            transform: translateY(0%);
   }
 }
 
@@ -6269,10 +6364,20 @@ textarea {
     -webkit-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
             transform: translateX(-50%);
-    padding: 0px 1.5rem 2rem;
+    padding: 0px 3rem 2rem 3.5rem;
     -webkit-transition: none;
     -o-transition: none;
     transition: none;
+    max-height: 492px;
+  }
+
+  .card-team__hover-box h5 {
+    font-size: 18px;
+    margin-bottom: 0;
+  }
+
+  .card-team__hover-box p {
+    font-size: 16px;
   }
 }
 
@@ -6318,7 +6423,6 @@ textarea {
 
   .menu__list {
     display: block;
-    text-align: center;
   }
 
   .menu__list > li:not(:last-child) {
@@ -6334,6 +6438,12 @@ textarea {
     display: inline-block;
     width: 100%;
     font-size: 16px;
+  }
+
+  .sub-menu {
+    position: static;
+    display: block;
+    background-color: transparent;
   }
 
   .cta-footer__body {
@@ -6450,10 +6560,6 @@ textarea {
     font-size: 1.6rem;
   }
 
-  .card-team__hover-box h5 {
-    font-size: 18px;
-  }
-
   .promo-header__bg {
     height: 80%;
   }
@@ -6538,6 +6644,11 @@ textarea {
         -ms-flex-align: start;
             align-items: flex-start;
     margin-bottom: 40px;
+  }
+
+  .case-studies__text {
+    max-width: none;
+    padding-right: 0;
   }
 
   .we-act__body {
@@ -6717,6 +6828,7 @@ textarea {
 
   .contact__title {
     margin-bottom: 10px;
+    font-size: 48px;
   }
 
   .contact__subtitle {
@@ -6760,17 +6872,18 @@ textarea {
   }
 
   .text-content h5 {
-    font-size: 20px;
+    font-size: 18px;
+  }
+
+  .menu {
+    height: calc(100vh - 90px);
+    overflow: auto;
   }
 
   .cta-footer__text {
     font-size: 22px;
     margin-top: 0;
     margin-right: 50px;
-  }
-
-  .clients-block__list > li {
-    margin-bottom: 40px;
   }
 
   .testimonials {
@@ -6919,10 +7032,6 @@ textarea {
   .case-studies {
     margin-bottom: 60px;
     padding-bottom: 0;
-  }
-
-  .case-studies__text {
-    padding-right: 0;
   }
 
   .advantages {
@@ -7156,10 +7265,6 @@ textarea {
   .contact {
     margin-bottom: 20px;
   }
-
-  .contact__title {
-    font-size: 60px;
-  }
 }
 
 @media (max-width: 575px) {
@@ -7240,6 +7345,10 @@ textarea {
     font-size: 10px;
   }
 
+  .menu {
+    height: calc(100vh - 60px);
+  }
+
   .cta-footer__title {
     margin-bottom: 15px;
   }
@@ -7257,11 +7366,7 @@ textarea {
   }
 
   .clients-block__list {
-    padding: 30px 0px 10px;
-  }
-
-  .clients-block__list > li {
-    margin-bottom: 20px;
+    padding: 30px 0px 33px;
   }
 
   .testimonials__slider {
@@ -7329,6 +7434,7 @@ textarea {
     width: calc(100% - 20px);
     font-size: 1.4rem;
     line-height: 2.2rem;
+    padding: 0px 2rem 2rem 2rem;
   }
 
   .img-slider .swiper-slide > span {
@@ -7500,10 +7606,6 @@ textarea {
 
   .contact__column-1 {
     margin-bottom: 30px;
-  }
-
-  .contact__title {
-    font-size: 50px;
   }
 
   .contact__subtitle {
