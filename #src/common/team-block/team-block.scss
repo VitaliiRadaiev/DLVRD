@@ -374,7 +374,7 @@
         position: absolute;
             top: 0;
             right: -200%;
-            height: calc(100% - 4.3rem);
+            min-height: calc(100% - 4.3rem);
             width: calc(100% - 41.14rem);
             background: #fff;
             z-index: 5;
@@ -384,7 +384,7 @@
             padding: 4rem 7rem 4rem 7rem;
             display: flex;
             flex-direction: column;
-        overflow-y: auto;
+        
 
           color: #06181c;
           font-size: 2rem;
@@ -392,6 +392,8 @@
 
           @media (max-width: $md2+px) {
             font-size: 1.6rem;
+            overflow: auto;
+            min-height: auto;
         }
 
 

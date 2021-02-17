@@ -82,17 +82,27 @@
             }
         }
         & .swiper-wrapper {
+            flex-wrap: wrap;
+            margin: 0 -22px;
+            width: auto;
         }
         & .swiper-slide {
-            width: 424px;
+            flex: 0 1 50%;
             height: auto;
+            padding: 0 22px;
+            margin-bottom: 44px;
+
+            @media (max-width: $md3+px) {
+                flex: 0 1 100%;
+                margin-bottom: 20px;
+            }
         }
     }
 
     &__slider-btn-wrap {
         display: flex;
         margin-top: 30px;
-
+        display: none;
         & .slider-btn {
             border-color: $decorColor;
 

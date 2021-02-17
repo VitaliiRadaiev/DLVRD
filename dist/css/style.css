@@ -2513,7 +2513,6 @@ textarea {
 
 .clients-block__list .swiper-slide {
   height: auto;
-  padding: 10px 25px;
   text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2524,6 +2523,23 @@ textarea {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.clients-block__list .swiper-slide > a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  padding: 10px 25px;
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
 }
 
 .clients-block__list .swiper-slide img {
@@ -3225,7 +3241,7 @@ textarea {
   position: absolute;
   top: 0;
   right: -200%;
-  height: calc(100% - 4.3rem);
+  min-height: calc(100% - 4.3rem);
   width: calc(100% - 41.14rem);
   background: #fff;
   z-index: 5;
@@ -3243,7 +3259,6 @@ textarea {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  overflow-y: auto;
   color: #06181c;
   font-size: 2rem;
   line-height: 1.75em;
@@ -3725,7 +3740,7 @@ textarea {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 137px;
+  margin-bottom: 60px;
   padding-left: 7px;
 }
 
@@ -4160,15 +4175,29 @@ textarea {
 .card-we-act {
   border-radius: 6px;
   background-color: #0054e8;
-  padding: 32px 46px 39px 45px;
+  padding: 32px 26px 39px 25px;
   position: relative;
   height: 100%;
   color: #ffffff;
   font-family: "ProximaNova", sans-serif;
-  font-size: 16px;
+  font-size: 22px;
   font-weight: 400;
   line-height: 1.375em;
   min-height: 290px;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .card-we-act_decor {
@@ -4193,9 +4222,9 @@ textarea {
   z-index: 2;
   color: #ffffff;
   font-family: "ProximaNova", sans-serif;
-  font-size: 20px;
+  font-size: 30px;
   font-weight: 600;
-  line-height: 2.3em;
+  line-height: 1.3em;
   text-transform: uppercase;
   margin-bottom: 10px;
 }
@@ -4225,6 +4254,7 @@ textarea {
   position: relative;
   z-index: 2;
   max-width: 200px;
+  margin: 0 auto;
 }
 
 .advantages {
@@ -5153,9 +5183,20 @@ textarea {
   margin: -30px;
 }
 
+.our-process__slider .swiper-wrapper {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 -22px;
+  width: auto;
+}
+
 .our-process__slider .swiper-slide {
-  width: 424px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
   height: auto;
+  padding: 0 22px;
+  margin-bottom: 44px;
 }
 
 .our-process__slider-btn-wrap {
@@ -5163,6 +5204,7 @@ textarea {
   display: -ms-flexbox;
   display: flex;
   margin-top: 30px;
+  display: none;
 }
 
 .our-process__slider-btn-wrap .slider-btn {
@@ -5785,6 +5827,10 @@ textarea {
 
   .main-footer__social-link:hover {
     color: #ff5733;
+  }
+
+  .clients-block__list .swiper-slide > a:hover {
+    background-color: rgba(0, 84, 232, 0.1);
   }
 
   .hero__btn:hover {
@@ -6566,6 +6612,8 @@ textarea {
 
   .card-team__hover-box {
     font-size: 1.6rem;
+    overflow: auto;
+    min-height: auto;
   }
 
   .promo-header__bg {
@@ -6632,10 +6680,6 @@ textarea {
   .services__bg-decor > span img {
     height: auto;
     width: 100px;
-  }
-
-  .services__head {
-    margin-bottom: 80px;
   }
 
   .case-studies:before {
@@ -7011,7 +7055,7 @@ textarea {
 
   .services__head {
     display: block;
-    margin-bottom: 60px;
+    margin-bottom: 50px;
   }
 
   .services__title {
@@ -7235,6 +7279,13 @@ textarea {
   .inner-services .hero .hero__body {
     padding-top: 160px;
     padding-bottom: 100px;
+  }
+
+  .our-process__slider .swiper-slide {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 100%;
+            flex: 0 1 100%;
+    margin-bottom: 20px;
   }
 
   .text-block {

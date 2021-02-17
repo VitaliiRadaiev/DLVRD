@@ -640,15 +640,12 @@
         position: relative;
         z-index: 2;
         display: flex;
-        margin-bottom: 137px;
+        margin-bottom: 60px;
         padding-left: 7px;
 
-        @media (max-width: $md2+px) {
-            margin-bottom: 80px;
-        }
         @media (max-width: $md3+px) {
             display: block;
-            margin-bottom: 60px;
+            margin-bottom: 50px;
         }
         @media (max-width: $md4+px) {
             margin-bottom: 30px;
