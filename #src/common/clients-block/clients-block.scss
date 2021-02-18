@@ -15,13 +15,31 @@
         flex-wrap: wrap;
         align-items: center;
         margin-bottom: 40px;
+        position: relative;
+
+        &:before {
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 110%;
+            height: 100%;
+            z-index: 1;
+            background-color: #ffffff;
+            border-radius: 9px;
+        }
 
         @media (max-width: $md2+px) {
-            padding: 60px 0px 33px;
+            padding: 60px 50px 33px;
         }
 
         @media (max-width: $md4+px) {
-            padding: 30px 0px 33px;
+            padding: 30px 50px 33px;
+        }
+
+        & .swiper-container {
+            z-index: 2;
         }
 
         & .swiper-slide {
@@ -40,18 +58,13 @@
                 padding: 10px 25px;
                 transition: all .3s ease;
 
-                @media (min-width: 992px) {
-                    &:hover {
-                        background-color: rgba($mainColor, 0.1);
-                    }
-                }
             }
             
             & img {
                 max-width: 100%;
                 max-height: 100%;
                 height: auto;
-    
+                width: 100%;
             }
 
             & svg {
@@ -61,4 +74,68 @@
             }
         }
     }
+
+    &__btn-wrap {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        pointer-events: none;
+        z-index: 3;
+    }
+
+    &__btn {
+        pointer-events: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        flex: 0 0 50px;
+
+        @media (max-width: $md4+px) {
+            flex: 0 0 40px;
+        }
+        
+        @media (min-width: 992px) {
+            &:hover {
+                & > span {
+
+                    & svg {
+
+                        fill: #000;
+                    }
+                }
+            }
+        }
+
+        & > span {
+            display: block;
+            width: 48px;
+            height: 48px;
+            transform: translateY(15px);
+
+            @media (max-width: $md4+px) {
+                transform: translateY(0px);
+
+                width: 38px;
+                height: 38px;
+            }
+            & svg {
+                width: 100%;
+                height: auto;
+                fill: #818181;
+                transition: all .3s ease;
+            }
+        }
+
+        &_prev {
+        }
+
+        &_next {
+        }
+    }
 }
+

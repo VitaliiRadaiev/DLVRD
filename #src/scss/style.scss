@@ -207,9 +207,13 @@ textarea {
 	max-width: 256px;
 	width: 100%;
 
-	& img {
+	& img, & svg {
 		width: 100%;
+		height: auto;
+		fill: #fff;
 	}
+
+
 }
 
 .mini-logo {

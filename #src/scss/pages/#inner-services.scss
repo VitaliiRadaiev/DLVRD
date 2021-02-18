@@ -53,17 +53,7 @@
     background-image: url(../img/photo/bg.png);
     background-repeat: repeat;
     position: relative;
-    &:after {
-        position: absolute;
-        content: '';
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        height: 40%;
-        background-color: #fff;
-        z-index: 1;
 
-    }
 
     & .container {
         position: relative;
@@ -360,7 +350,7 @@
     &__column-2 {
         flex: 0 0 52.4%;
         position: relative;
-        min-height: 588px;
+       // min-height: 588px;
         padding: 30px;
         display: flex;
         flex-direction: column;
@@ -490,12 +480,32 @@
         background-color: #073fa2;
         padding: 87px 0 148px;
 
+
+
         @media (max-width: $md3+px) {
             padding-top: 40px;
             padding-bottom: 130px;
         }
         & .clients-block__list {
             background-color: transparent;
+
+            &:before {
+                background-color: transparent;
+            }
+
+            & .clients-block__btn {
+                & svg {
+                    fill: rgba(#fff, 0.7);
+                }
+
+            @media (min-width: 992px) {
+                &:hover {
+                    & svg {
+                        fill: #fff;
+                    }
+                }
+            }
+            }
         }
 
         & .clients-block__title {

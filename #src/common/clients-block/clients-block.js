@@ -1,44 +1,28 @@
 {
     let clientsBlock = document.querySelector('.clients-block');
     if(clientsBlock) {
-        let dataSlider = new Swiper(clientsBlock.querySelector('.clients-block__list'), {
+        let dataSlider = new Swiper(clientsBlock.querySelector('.swiper-container'), {
             slidesPerView:3,
-            //loop: true,
+            loop: true,
             speed: 600,
-            autoplay: {
-              delay: 4000,
-               disableOnInteraction: false,
-            },
+            // autoplay: {
+            //   delay: 4000,
+            //    disableOnInteraction: false,
+            // },
             spaceBetween: 15,
-            pagination: {
-                el: clientsBlock.querySelector('.swiper-pagination'),
-                 clickable: true,
-                 renderBullet: function(index, className) {
-                     return '<div class="' + className + '"> <span class="progress"></span> </div>'
-                 }
-              },
-             on: {
-
-                 slideChangeTransitionStart: function(current) {
-                     let pagination = clientsBlock.querySelector('.swiper-pagination');
-                     let lenght = pagination.children.length;
-                     
-                     for(let i = 0; i < lenght; i++) {
-                         if(i == current.activeIndex) break;
-                         pagination.children[i].classList.add('isShow');
-                     }
-
-                     for(let i = current.activeIndex; i < lenght; i++) {
-                         pagination.children[i].classList.remove('isShow');
-                         pagination.children[i].firstElementChild.style.transform = 'scaleX(0)';
-                     }
-                 }
-             }, 
+            navigation: {
+                nextEl: clientsBlock.querySelector('.clients-block__btn_prev'),
+                prevEl: clientsBlock.querySelector('.clients-block__btn_next'),
+            },
              breakpoints: {
                 320: {
-                    slidesPerView: 2,
+                    slidesPerView: 1,
                     spaceBetween: 0,
                    // slidesPerGroup: 2,
+                },
+                480: {
+                    slidesPerView: 2,
+                    spaceBetween: 0,
                 },
                 768: {
                     slidesPerView: 3,
@@ -49,4 +33,30 @@
             },
             })
     }
+
+    let logosImg = document.querySelectorAll('.clients-block .swiper-slide img');
+    if(logosImg.length) {
+        function imgToColourImg() {
+            let srcColourImg = this.dataset.imgcoloursrc;
+            this.dataset.imgcoloursrc = this.src;
+            this.style.maxWidth = this.clientWidth + 'px';
+            if(srcColourImg) {
+                this.src = srcColourImg;
+            }
+        }
+
+        function imgToGrayImg() {
+            let scrImg = this.dataset.imgcoloursrc;
+            this.dataset.imgcoloursrc = this.src;
+            if(scrImg) {
+                this.src = scrImg;
+            }
+        }
+
+        logosImg.forEach(img => {
+            img.addEventListener('mouseenter', imgToColourImg);
+            img.addEventListener('mouseleave', imgToGrayImg);
+        })
+    }
+    
 }

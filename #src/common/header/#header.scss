@@ -8,13 +8,41 @@
     transition: all .4s ease;
 
     &._background {
-        background-color: #073fa2;
+        background-color: #d1d1d1;
+        & .menu__link {
+            color: #000;
+        }
+
+        & .header__logo {
+            & svg {
+                fill: #000;
+            }
+        }
     }
     &._isMove {
-        background-color: #073fa2;
+        background-color: #818181;
+        
+        & .menu__link {
+            color: #fff;
+        }
+
+        & .header__logo {
+            & svg {
+                fill: #fff;
+            }
+        }
     }
     &._isMenuOpen {
-        background-color: #073fa2;
+        background-color: #818181;
+        & .menu__link {
+            color: #000;
+        }
+
+        & .header__logo {
+            & svg {
+                fill: #000;
+            }
+        }
     }
 
     &__body {
@@ -119,7 +147,7 @@
         left: 0;
         width: 100%;
         padding: 20px 15px;
-        background-color: #073fa2;
+        background-color: #818181;
         display: none;
     }
 
@@ -160,7 +188,7 @@
                         content: '•';
                         color: inherit;
                         margin-left: 10px;
-                        color: #fff;
+                        color: inherit;
                         display: inline-block;
                         font-size: 16px;
                         transition: all .2s ease;
@@ -235,7 +263,7 @@
     position: absolute;
     top: 100%;
     left: 0;
-    min-width: 160px;
+    min-width: 163px;
     background-color: $decorColor;
     border-radius: 6px;
     display: none;
