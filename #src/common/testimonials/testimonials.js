@@ -42,4 +42,15 @@
             })
         })
     }
+
+    let slids = document.querySelectorAll('.testimonials__slider .swiper-slide');
+    if(slids.length) {
+        if(document.documentElement.clientWidth > 1140) {
+            slids.forEach(slide => {
+                let height = slide.querySelector('.testimonials__text').clientHeight;
+                let logo = slide.querySelector('.testimonials__logo');
+                logo.style.height = height + 'px';
+            })
+        }
+    }
 }

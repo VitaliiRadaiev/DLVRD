@@ -11,8 +11,8 @@
             // },
             spaceBetween: 15,
             navigation: {
-                nextEl: clientsBlock.querySelector('.clients-block__btn_prev'),
-                prevEl: clientsBlock.querySelector('.clients-block__btn_next'),
+                nextEl: clientsBlock.querySelector('.clients-block__btn_next'),
+                prevEl: clientsBlock.querySelector('.clients-block__btn_prev'),
             },
              breakpoints: {
                 320: {
@@ -53,9 +53,14 @@
             }
         }
 
+        function reduseImg(img) {
+            img.style.maxWidth = (img.clientWidth / 1.7) + 'px';
+        }
+
         logosImg.forEach(img => {
             img.addEventListener('mouseenter', imgToColourImg);
             img.addEventListener('mouseleave', imgToGrayImg);
+            reduseImg(img);
         })
     }
     

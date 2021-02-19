@@ -1,18 +1,11 @@
 .testimonials {
-    margin-bottom: 104px;
-    @media (max-width: $md3+px) {
-        margin-bottom: 60px;
-    }
+
 
     &_v2 {
         background-color: #073fa2;
         position: relative;
         overflow: hidden;
-        margin-bottom: 93px;
 
-        @media (max-width: $md3+px) {
-            margin-bottom: 60px;
-        }
 
         &:before {
             position: absolute;
@@ -200,9 +193,10 @@
         max-width: 241px;
         position: absolute;
         left: 84px;
-        top: 50%;
-        transform: translateY(-50%);
+        top: 0;
         z-index: 2;
+        display: flex;
+        align-items: center;
 
         @media (max-width: 1265px) {
             left: 20px;
@@ -214,7 +208,7 @@
         }
 
         & img {
-            max-height: 100%;
+            height: auto;
             max-width: 100%;
         }
     }

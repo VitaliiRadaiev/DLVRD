@@ -242,7 +242,6 @@
 
 
 
-
 .bottom-tabs {
     max-width: 1358px;
     padding: 0 15px;
@@ -767,6 +766,10 @@
         background-color:$mainColor2;
         display: block;
         transition: all .2s ease;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
 
         @media (min-width: 992px) {
             &:hover {
@@ -797,7 +800,39 @@
         }
     }
 
+    &__card-title{
+        color: #fff;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        text-transform: none;
+        text-align: center;
+        padding: 10px;
+        word-wrap: break-word;
+        cursor: pointer;
 
+        font-size: calc(18px + 10 * (100vw / 1070));
+
+		@media (max-width: $md2+px ) {
+			font-size: calc(18px + 10 * (100vw / 1070));
+		}
+		@media (max-width: $md3+px ) {
+			font-size: calc(18px + (10 + 10 * 0.7) * ((100vw - 320px) / 1070));
+		}
+
+        @media (min-width: 1920px) {
+            font-size: 36px;
+        }
+
+        // @media (max-width: $md2+px) {
+        //     font-size: 28px;
+        // }
+    }
 
     &__big-card {
         position: absolute;
