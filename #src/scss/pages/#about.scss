@@ -2,6 +2,14 @@
     & .clients-block {
         margin-bottom: 12px;
     }
+
+    & .testimonials {
+        margin-bottom: 100px;
+
+        @media (max-width: $md3+px) {
+            margin-bottom: 60px;
+        }
+    }
 }
 
 

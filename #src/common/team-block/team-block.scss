@@ -1,8 +1,53 @@
+.founder-team {
+    display: flex;
+    margin-bottom: 80px;
+
+    @media (max-width: $md2+px) {
+        display: block;
+    }
+
+    &__card {
+        flex: 0 0 auto;
+
+        @media (max-width: $md2+px) {
+            margin: 0 auto;
+        }
+    }
+
+    &__text {
+        flex: 1 1 auto;
+        background: #fff;
+        box-shadow: 0 3rem 6rem rgba(152, 152, 152, 0.16);
+        padding: 4rem 7rem 4rem 7rem;
+
+        @media (max-width: $md3+px) {
+            padding: 4rem 4rem 4rem 4rem;
+        }
+        @media (max-width: $md4+px) {
+            padding: 3rem 2rem;
+        }
+    }
+}
+
 .team {
     margin-bottom: 81px;
 
     @media (max-width: $md3+px) {
         margin-bottom: 60px;
+    }
+
+    
+
+    &__founder {
+
+        &.container {
+            max-width: 126.5rem;
+
+            @media (max-width: 1439px) {
+                max-width: 127.5rem;
+            }
+        }
+        
     }
 
     &__title {

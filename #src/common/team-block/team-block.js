@@ -132,7 +132,7 @@
 			transferCardsForSmallWindow();
 		} else {
 			transferCardsForBigWindow();
-			block.querySelector('.list-team__cord-wrap').classList.add('_open');
+			//block.querySelector('.list-team__cord-wrap').classList.add('_open');
 		}
 
 		if(document.documentElement.clientWidth > 1023 && document.documentElement.clientWidth <= 1440) {

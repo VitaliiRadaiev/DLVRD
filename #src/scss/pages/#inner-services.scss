@@ -4,7 +4,7 @@
             min-height: 281px;
             display: flex;
             flex-direction: column;
-            justify-content: flex-end;
+            justify-content: center;
 
             @media (max-width: $md2+px) {
                 min-height: 220px;

@@ -31,6 +31,11 @@
                 },
 
             },
+            // on: {
+            //     init: function () {
+                  
+            //     },
+            //   }
             })
     }
 
@@ -53,15 +58,47 @@
             }
         }
 
-        function reduseImg(img) {
-            img.style.maxWidth = (img.clientWidth / 1.7) + 'px';
-        }
 
         logosImg.forEach(img => {
             img.addEventListener('mouseenter', imgToColourImg);
             img.addEventListener('mouseleave', imgToGrayImg);
-            reduseImg(img);
+           // img.style.maxWidth = (img.clientWidth / 1.7) + 'px';
+            
         })
+
+        // preloadImages(logosImg, createWidth)
+
+        // function createWidth() {
+         
+            
+        //     logosImg.forEach(img => {
+        //         img.style.maxWidth = (img.clientWidth / 1.7) + 'px';
+        //     })
+        // }
+
+        // function preloadImages(sources, callback) {
+        //     let counter = 0;
+      
+        //     function onLoad() {
+          
+                
+        //       counter++;
+        //       if (counter == sources.length) {
+
+        //         callback();
+        //       }
+        //     }
+      
+        //     for(let img of sources) {
+           
+                
+        //       img.onload = img.onerror = onLoad;
+
+        //     }
+        //   }
     }
+
+
+  
     
 }
