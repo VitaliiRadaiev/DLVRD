@@ -9,6 +9,18 @@
     &__card {
         flex: 0 0 auto;
 
+        &.card-team {
+            cursor: auto;
+
+            @media (min-width: 992px) {
+                &:hover {
+                    & .card-team__text-box {
+                        box-shadow: 0 30px 60px rgba(6, 24, 28, 0.16);
+                    }
+                }
+            }
+        }
+
         @media (max-width: $md2+px) {
             margin: 0 auto;
         }

@@ -3083,6 +3083,10 @@ textarea {
           flex: 0 0 auto;
 }
 
+.founder-team__card.card-team {
+  cursor: auto;
+}
+
 .founder-team__text {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
@@ -6093,6 +6097,11 @@ textarea {
 
   .hero__btn:hover {
     background-color: #0054e8;
+  }
+
+  .founder-team__card.card-team:hover .card-team__text-box {
+    -webkit-box-shadow: 0 30px 60px rgba(6, 24, 28, 0.16);
+            box-shadow: 0 30px 60px rgba(6, 24, 28, 0.16);
   }
 
   .card-team:hover .card-team__text-box {
